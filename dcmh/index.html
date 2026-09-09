@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC漫画-DC漫画入门指南与经典作品推荐</title>
+    <meta name="description" content="深入探索DC漫画的宇宙起源、著名超级英雄、经典必读作品与新手阅读顺序，帮助漫画迷快速了解DC漫画的宏大世界与独特魅力。">
+    <meta name="keywords" content="DC漫画,DC漫画入门,DC漫画推荐,DC宇宙,蝙蝠侠,超人,正义联盟,DC漫画阅读顺序">
+    <style>
+        :root {
+            --primary-color: #1a2a6c;
+            --secondary-color: #b21f1f;
+            --accent-color: #fdbb30;
+            --text-dark: #1e1e24;
+            --text-light: #5a5a66;
+            --bg-light: #f7f8fc;
+            --bg-card: #ffffff;
+            --border-light: #e2e4ee;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 6px 20px rgba(0,0,0,0.08);
+            --radius-card: 16px;
+            --radius-btn: 30px;
+            --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header & Navigation */
+        .site-header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 0;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 18px 0;
+        }
+        .brand-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .brand-logo {
+            background: var(--accent-color);
+            color: #0f172a;
+            font-weight: 900;
+            font-size: 1.8rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 0 3px rgba(253, 187, 48, 0.3);
+        }
+        .brand-name {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+        .brand-name span {
+            color: var(--accent-color);
+        }
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            color: rgba(255,255,255,0.85);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 1rem;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+        }
+        .main-nav a:hover {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(145deg, #0b1a3a 0%, #1e2f5a 55%, #2a3a6e 100%);
+            color: #ffffff;
+            padding: 80px 0 70px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            right: -100px;
+            top: -50px;
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(253,187,48,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-content {
+            max-width: 800px;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        .hero h1 .hero-highlight {
+            color: var(--accent-color);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            max-width: 650px;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        /* Section Common */
+        .section {
+            padding: 70px 0;
+        }
+        .section-label {
+            display: inline-block;
+            background: rgba(26, 42, 108, 0.08);
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 4px 16px;
+            border-radius: 30px;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        .section-title {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 40px;
+            max-width: 750px;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 20px;
+        }
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 30px 25px;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-light);
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+        .card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 35px 30px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s;
+            border-left: 5px solid var(--primary-color);
+            height: 100%;
+        }
+        .feature-card:hover {
+            box-shadow: var(--shadow-md);
+            border-left-color: var(--secondary-color);
+        }
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* Guide Section */
+        .guide-wrapper {
+            background: var(--bg-card);
+            border-radius: var(--radius-card);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+        }
+        .guide-step {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: linear-gradient(135deg, var(--primary-color), #3b4a8c);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(26,42,108,0.3);
+        }
+        .guide-step-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+        .guide-step-content p {
+            color: var(--text-light);
+        }
+
+        /* FAQ */
+        .faq-list {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: var(--bg-card);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            padding: 25px 30px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-light);
+            transition: box-shadow 0.3s;
+        }
+        .faq-item:hover {
+            box-shadow: var(--shadow-md);
+        }
+        .faq-item h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        .faq-item p {
+            color: var(--text-light);
+        }
+
+        /* CTA / Banner */
+        .cta-banner {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 20px;
+            padding: 50px 40px;
+            color: white;
+            text-align: center;
+            margin: 30px 0;
+        }
+        .cta-banner h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        .cta-banner p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 650px;
+            margin: 0 auto 25px;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #0f172a;
+            font-weight: 700;
+            padding: 12px 35px;
+            border-radius: var(--radius-btn);
+            font-size: 1rem;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+        .btn:hover {
+            background: transparent;
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        /* Footer */
+        .site-footer {
+            background: #0f172a;
+            color: rgba(255,255,255,0.7);
+            padding: 50px 0 30px;
+            margin-top: 40px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .footer-brand h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .footer-brand p {
+            max-width: 300px;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        .footer-links h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 8px;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.6);
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            .main-nav ul {
+                justify-content: center;
+                gap: 20px;
+            }
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            .section {
+                padding: 50px 0;
+            }
+            .section-title {
+                font-size: 1.9rem;
+            }
+            .guide-wrapper {
+                padding: 25px;
+            }
+            .cta-banner {
+                padding: 35px 20px;
+            }
+            .cta-banner h2 {
+                font-size: 1.6rem;
+            }
+            .brand-name {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand-area">
+                <div class="brand-logo">DC</div>
+                <div class="brand-name">DC<span>漫画</span></div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#overview">宇宙概览</a></li>
+                    <li><a href="#heroes">英雄角色</a></li>
+                    <li><a href="#reading">阅读指南</a></li>
+                    <li><a href="#classics">经典推荐</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 首屏 -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">✨ 漫画宇宙 · 始于1938年</div>
+                    <h1>探索<span class="hero-highlight">DC漫画</span>的浩瀚宇宙</h1>
+                    <p>从超人、蝙蝠侠到正义联盟，DC漫画创造了无数经典英雄与宏大故事。无论你是初次接触还是资深读者，这里都为你提供清晰的入门路径与深度内容。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 宇宙概览 -->
+        <section id="overview" class="section">
+            <div class="container">
+                <span class="section-label">多元宇宙基础</span>
+                <h2 class="section-title">理解DC漫画宇宙</h2>
+                <p class="section-subtitle">DC漫画（Detective Comics）诞生于1934年，是全球历史最悠久的漫画出版社之一。其核心特色是由众多超级英雄共同构成的"DC宇宙"。</p>
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-icon">🌌</div>
+                        <h3>多元宇宙概念</h3>
+                        <p>DC宇宙由无数平行地球组成，不同地球有着不同的英雄版本与历史走向。主宇宙被称为"新地球"或Prime Earth，是大多数主线故事发生的舞台。</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">⚡</div>
+                        <h3>核心英雄团队</h3>
+                        <p>正义联盟是DC最知名的英雄团队，包括超人、蝙蝠侠、神奇女侠、闪电侠、海王、钢骨等。他们共同守护地球免受重大威胁。</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📜</div>
+                        <h3>重启与连续性</h3>
+                        <p>DC经历过多次宇宙重启，如"无限地球危机"、"闪点"和"重生"等事件。这些重启为新读者提供了相对干净的入口，但也增加了理解的复杂性。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 英雄角色 -->
+        <section id="heroes" class="section" style="background: #ffffff;">
+            <div class="container">
+                <span class="section-label">标志性人物</span>
+                <h2 class="section-title">DC漫画的代表性英雄</h2>
+                <p class="section-subtitle">这些角色不仅定义了DC漫画的风格，也深刻影响了整个流行文化。</p>
+                <div class="cards-grid">
+                    <div class="feature-card">
+                        <h3>🦸 超人 / Superman</h3>
+                        <p>来自氪星的卡尔-艾尔，被地球夫妇收养后成为克拉克·肯特。他是希望的象征，拥有飞行、超级力量、热视线等能力。超人的故事探讨了力量与责任的关系。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🦇 蝙蝠侠 / Batman</h3>
+                        <p>布鲁斯·韦恩，哥谭市的黑暗骑士。没有超能力，依靠智慧、训练与高科技装备打击犯罪。蝙蝠侠是DC漫画中人性深度最复杂的角色之一。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>⚔️ 神奇女侠 / Wonder Woman</h3>
+                        <p>亚马逊公主戴安娜，来自天堂岛。她集力量、智慧与慈悲于一身，使用真言套索和守护银镯。神奇女侠是女权与和平的象征。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>⚡ 闪电侠 / The Flash</h3>
+                        <p>巴里·艾伦是第二代闪电侠，因被闪电击中而获得神速力。他能够超高速移动，甚至穿越时间。闪电侠的故事常与多元宇宙和时空旅行相关。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🌊 海王 / Aquaman</h3>
+                        <p>亚瑟·库里，亚特兰蒂斯之王，能够与海洋生物沟通并操控海水。海王的故事融合了海洋神话与政治斗争。</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🔧 钢骨 / Cyborg</h3>
+                        <p>维克多·斯通因母盒爆炸而成为半机械人，拥有科技操控能力。他是正义联盟的技术核心，也是DC宇宙中重要的多元文化代表。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 阅读指南 -->
+        <section id="reading" class="section">
+            <div class="container">
+                <span class="section-label">新手友好</span>
+                <h2 class="section-title">如何开始阅读DC漫画</h2>
+                <p class="section-subtitle">面对数万期漫画，新读者可能感到无从下手。以下步骤可以帮助你找到适合自己的阅读路径。</p>
+                <div class="guide-wrapper">
+                    <div class="guide-step">
+                        <div class="step-number">1</div>
+                        <div class="guide-step-content">
+                            <h3>确定感兴趣的角色或团队</h3>
+                            <p>从你最熟悉的英雄开始，例如蝙蝠侠、超人，或直接选择正义联盟系列。兴趣是最好的向导，不必强迫自己从最早期的漫画读起。</p>
+                        </div>
+                    </div>
+                    <div class="guide-step">
+                        <div class="step-number">2</div>
+                        <div class="guide-step-content">
+                            <h3>寻找著名的独立故事线</h3>
+                            <p>很多经典的DC故事是相对独立的，不需要太多背景知识。例如《蝙蝠侠：元年》《超人之死》《闪点》等，都是绝佳的起点。</p>
+                        </div>
+                    </div>
+                    <div class="guide-step">
+                        <div class="step-number">3</div>
+                        <div class="guide-step-content">
+                            <h3>利用重启点作为入口</h3>
+                            <p>2011年的"新52"和2016年的"DC重生"都是良好的重启节点。从这些时期的第一期开始阅读，可以更自然地理解当前宇宙状态。</p>
+                        </div>
+                    </div>
+                    <div class="guide-step">
+                        <div class="step-number">4</div>
+                        <div class="guide-step-content">
+                            <h3>借助数字平台与合集</h3>
+                            <p>现在可以通过官方数字平台或实体合集（如Trade Paperback）阅读。合集通常会收录完整的故事线，省去查找单期杂志的麻烦。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 经典推荐 -->
+        <section id="classics" class="section" style="background: #ffffff;">
+            <div class="container">
+                <span class="section-label">必读作品</span>
+                <h2 class="section-title">不可错过的DC漫画经典</h2>
+                <p class="section-subtitle">以下作品在漫画史上具有里程碑意义，适合作为深度阅读的扩展。</p>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>《黑暗骑士归来》</h3>
+                        <p>弗兰克·米勒的代表作，描绘了老年蝙蝠侠重出江湖的暗黑未来。这部作品重新定义了蝙蝠侠的角色基调，影响了后世无数改编。</p>
+                    </div>
+                    <div class="card">
+                        <h3>《守望者》</h3>
+                        <p>阿兰·摩尔与戴夫·吉本斯创作的漫画杰作，虽然背景是独立宇宙，但通常被视为DC最具深度的作品之一。它解构了超级英雄的概念。</p>
+                    </div>
+                    <div class="card">
+                        <h3>《致命玩笑》</h3>
+                        <p>蝙蝠侠与小丑的经典对决，由阿兰·摩尔撰写。这部作品深入探讨了小丑的起源与蝙蝠侠的宿命关系，是理解哥谭黑暗面的重要篇章。</p>
+                    </div>
+                    <div class="card">
+                        <h3>《超人之死》</h3>
+                        <p>90年代轰动全球的事件，超人迎战毁灭日并战死。这一故事展示了DC宇宙中英雄的牺牲精神，也带来了后续的"超人回归"。</p>
+                    </div>
+                    <div class="card">
+                        <h3>《无限地球危机》</h3>
+                        <p>1985年的大事件，首次系统性地整合了DC多元宇宙，消灭了大量平行地球。它是了解DC宇宙演变历史的关键作品。</p>
+                    </div>
+                    <div class="card">
+                        <h3>《闪点》</h3>
+                        <p>2011年由杰夫·琼斯创作，闪电侠改变时间线导致宇宙重启。这部作品直接催生了"新52"时代，是重要的转折点。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="container">
+            <div class="cta-banner">
+                <h2>准备开启你的DC漫画旅程？</h2>
+                <p>无论你喜欢黑暗深沉的城市传奇，还是光明宏大的星际史诗，DC漫画总有一个故事能触动你。从一部经典开始，慢慢探索这个丰富多元的宇宙。</p>
+                <a href="#reading" class="btn">查看新手阅读指南</a>
+            </div>
+        </section>
+
+        <!-- 注意事项 -->
+        <section class="section">
+            <div class="container">
+                <span class="section-label">阅读提示</span>
+                <h2 class="section-title">关于DC漫画的几点说明</h2>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>连续性并非绝对</h3>
+                        <p>DC漫画的连续性有时会因编剧或编辑需要而调整。不同作者笔下的同一角色可能有细微差异，这属于正常现象，不必过于纠结。</p>
+                    </div>
+                    <div class="card">
+                        <h3>推荐阅读顺序</h3>
+                        <p>建议先阅读角色独立的系列，再接触大事件。这样能更好地理解人物关系。大事件往往涉及众多角色，需要一定背景积累。</p>
+                    </div>
+                    <div class="card">
+                        <h3>影视与漫画的关系</h3>
+                        <p>DC电影和剧集（如DCEU、DCU）通常基于漫画改编，但情节有较大改动。漫画原作拥有更丰富和复杂的故事线，值得单独探索。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section" style="background: #ffffff;">
+            <div class="container">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">关于DC漫画的常见问题</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>DC漫画和漫威漫画有什么区别？</h3>
+                        <p>两大漫画公司风格不同。DC更倾向于神话般的英雄和宏大宇宙观，角色常带有象征意义；漫威则更强调角色的平民化和现实感。DC的核心角色如超人、蝙蝠侠多为"神性"英雄，而漫威的蜘蛛侠、X战警等更贴近普通人的挣扎。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>DC漫画的正确阅读顺序是什么？</h3>
+                        <p>没有唯一正确的顺序。建议从感兴趣的角色独立系列开始（如《蝙蝠侠》主刊），然后阅读该角色的经典故事线。之后可以尝试《正义联盟》系列来了解团队互动，再逐步接触大事件如《暗夜金属》《无限边疆》等。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>DC漫画适合未成年人阅读吗？</h3>
+                        <p>DC漫画有分级。大多数主线超级英雄漫画适合青少年及以上读者，但部分作品如《黑暗骑士归来》《V字仇杀队》等包含黑暗主题和暴力场面，需要家长根据孩子的成熟度进行选择。DC也有专门的"DC Kids"系列面向年轻读者。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>如何区分DC漫画的不同地球？</h3>
+                        <p>DC多元宇宙中，主地球（Prime Earth）是大多数故事的发生地。其他著名地球包括地球-2（黄金时代英雄）、地球-3（反派联盟）等。不同地球的英雄组合和事件发展都有差异。阅读大事件时，通常会在开头解释当前涉及的地球编号。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>DC漫画</h3>
+                    <p>一个帮助你探索DC漫画宇宙的入门与深度指南平台。我们相信，好的故事值得被更多人发现。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#overview">宇宙概览</a></li>
+                        <li><a href="#heroes">英雄角色</a></li>
+                        <li><a href="#reading">阅读指南</a></li>
+                        <li><a href="#classics">经典推荐</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>相关主题</h4>
+                    <ul>
+                        <li><a href="#">正义联盟</a></li>
+                        <li><a href="#">蝙蝠侠系列</a></li>
+                        <li><a href="#">超人系列</a></li>
+                        <li><a href="#">DC大事件</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2024 DC漫画爱好者指南 · 本页面仅供学习交流 · 所有角色版权归 DC Comics 所有</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
